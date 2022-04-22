@@ -3,16 +3,22 @@ package lk.lahiru.lmsback.model;
 import java.io.Serializable;
 
 public class StudentDTO implements Serializable {
+    private String id;
     private String name;
     private String email;
     private String nic;
-
-
 
     public StudentDTO() {
     }
 
     public StudentDTO(String name, String email, String nic) {
+        this.name = name;
+        this.email = email;
+        this.nic = nic;
+    }
+
+    public StudentDTO(String id, String name, String email, String nic) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.nic = nic;
@@ -41,10 +47,20 @@ public class StudentDTO implements Serializable {
     public void setNic(String nic) {
         this.nic = nic;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "StudentDTO{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", nic='" + nic + '\'' +
                 '}';

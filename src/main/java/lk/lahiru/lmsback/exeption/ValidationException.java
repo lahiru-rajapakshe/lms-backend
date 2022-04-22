@@ -1,6 +1,7 @@
 package lk.lahiru.lmsback.exeption;
 
-public class ValidationException extends RuntimeException {
+public class ValidationException extends RuntimeException{
+
     public ValidationException() {
         super();
     }
@@ -15,9 +16,5 @@ public class ValidationException extends RuntimeException {
 
     public ValidationException(Throwable cause) {
         super(cause);
-    }
-
-    protected ValidationException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
     }
 }
