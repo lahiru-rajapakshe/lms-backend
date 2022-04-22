@@ -6,7 +6,7 @@
     
     <servlet>
         <servlet-name>StudentServlet</servlet-name>
-        <servlet-class>lk.lahiru.lmsback.StudentServlet</servlet-class>
+        <servlet-class>lk.lahiru.lmsback.api.StudentServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
