@@ -88,8 +88,11 @@ import lk.lahiru.lmsback.model.StudentDTO;
 import lk.lahiru.lmsback.util.Customer;
 
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.*;
         import javax.servlet.http.*;
+import javax.sql.DataSource;
 import javax.xml.bind.ValidationException;
 import java.io.BufferedReader;
         import java.io.IOException;
@@ -99,7 +102,20 @@ import java.io.BufferedReader;
 
 public class StudentServlet extends HttpServlet {
 
+    public volatile DataSource pool;
+
     public StudentServlet() {
+    }
+
+    @Override
+    public void init() throws ServletException {
+        InitialContext ctx = null;
+        try {
+            ctx = new InitialContext();
+            pool =(DataSource) ctx.lookup("java:comp/env/jdbc/pool4lms");
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
