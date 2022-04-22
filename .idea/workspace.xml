@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66462cce-ad8a-46eb-970c-9d368915258b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/lahiru/lmsback/api/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/lahiru/lmsback/api/StudentServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="66462cce-ad8a-46eb-970c-9d368915258b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650536061980</updated>
       <workItem from="1650536063466" duration="9971000" />
-      <workItem from="1650603145682" duration="4914000" />
+      <workItem from="1650603145682" duration="6539000" />
     </task>
     <servers />
   </component>
