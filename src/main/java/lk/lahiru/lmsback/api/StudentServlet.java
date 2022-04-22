@@ -26,10 +26,21 @@ public class StudentServlet extends HttpServlet {
     private volatile DataSource pool;
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        String origin = req.getHeader("Origin");
+//        if (origin.contains("localhost:1234")){
+//            resp.setHeader("Access-Control-Allow-Origin", origin);
+//            if (req.getMethod().equals("OPTIONS")) {
+//                resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, HEAD");
+//                resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
+//                resp.setHeader("Access-Control-Expose-Headers", "Content-Type");
+//            }
+//        }
+        super.service(req, resp);
     }
 
     @Override
+
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getContentType() == null ||
                 !req.getContentType().toLowerCase().startsWith("application/json")) {
